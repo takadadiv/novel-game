@@ -1,6 +1,6 @@
 <template lang="pug">
   .container
-    .app(:style="{ backgroundImage: `url(${scene.backgroundImage})` }")
+    .app(:style="{ backgroundImage: `url(${bgImage})` }")
       MainText
 </template>
 
@@ -12,9 +12,9 @@ export default {
     MainText
   },
   computed: {
-    scene () {
-      return this.$store.state.scene
-    },
+    bgImage () {
+      return this.$store.state.scene.bgImage
+    }
   }
 }
 </script>

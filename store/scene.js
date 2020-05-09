@@ -1,17 +1,21 @@
 export const state = () => ({
   no: 1,
-  backgroundImage: '_nuxt/assets/graphic/background/livehouse.png',
-  current: 0
+  bgImage: null,
+  texts: [],
+  textIndex: 0
 })
 
 export const mutations = {
-  setNo (no) {
+  no (state, no) {
     state.no = no
   },
-  setBackgroundImage (background) {
-    state.background = background
+  bgImage (state, bgImage) {
+    state.bgImage = `/_nuxt/assets/graphic/background/${bgImage}`
   },
-  setCurrent (current) {
-    state.current = current
+  texts (state, texts) {
+    state.texts = texts
+  },
+  textIndex (state, textIndex) {
+    state.textIndex = textIndex
   }
 }
