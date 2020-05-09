@@ -1,18 +1,33 @@
 <template lang="pug">
-  .app(:style="{ backgroundImage: `url(${backgroundImage})` }")
+  .container
+    .app(:style="{ backgroundImage: `url(${scene.backgroundImage})` }")
+      MainText
 </template>
 
 <script>
+import MainText from '~/components/MainText.vue'
+
 export default {
+  components: {
+    MainText
+  },
   computed: {
-    backgroundImage () {
-      return this.$store.state.scene.backgroundImage
+    scene () {
+      return this.$store.state.scene
     },
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+.container
+  background #ccc
+  width 100%
+  max-width 450px
+  height 100vh
+  max-height 900px
+  margin 0 auto
+  position relative
 .app
   width 100%
   height 100%

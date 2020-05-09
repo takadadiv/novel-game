@@ -1,5 +1,5 @@
 export const state = () => ({
-  no: 0,
+  no: 1,
   backgroundImage: '_nuxt/assets/graphic/background/livehouse.png',
   current: 0
 })
