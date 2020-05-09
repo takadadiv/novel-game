@@ -1,18 +1,29 @@
 <template lang="pug">
-  .wrapper(@click="read")
-    .text {{ texts[textIndex] }}
+  .wrapper(@click="next")
+    .speaker {{ speaker }}
+    .text {{ text }}
 </template>
 
 <script>
 import { mapState } from 'vuex'
 
 export default {
-  computed: mapState('scene', [
-    'texts', 'textIndex'
-  ]),
+  computed: {
+    text () {
+      const event = this.events[this.eventIndex]
+      return event?.text || event
+    },
+    speaker () {
+      const event = this.events[this.eventIndex]
+      return event?.speaker
+    },
+    ...mapState('scene', [
+      'events', 'eventIndex'
+    ])
+  },
   methods: {
-    read () {
-      console.log('read!')
+    next () {
+      this.$store.commit('scene/eventIndex', this.eventIndex + 1);
     }
   }
 }

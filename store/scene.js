@@ -1,8 +1,8 @@
 export const state = () => ({
   no: 1,
   bgImage: null,
-  texts: [],
-  textIndex: 0
+  events: [],
+  eventIndex: 0
 })
 
 export const mutations = {
@@ -12,10 +12,10 @@ export const mutations = {
   bgImage (state, bgImage) {
     state.bgImage = `/_nuxt/assets/graphic/background/${bgImage}`
   },
-  texts (state, texts) {
-    state.texts = texts
+  events (state, events) {
+    state.events = events
   },
-  textIndex (state, textIndex) {
-    state.textIndex = textIndex
+  eventIndex (state, eventIndex) {
+    state.eventIndex = eventIndex
   }
 }

@@ -12,8 +12,8 @@ export default {
   async fetch ({ store, $axios }) {
     const json = await $axios.$get('scene/scene1.json')
     store.commit('scene/no', 1)
-    store.commit('scene/textIndex', 0)
-    store.commit('scene/texts', json.texts)
+    store.commit('scene/eventIndex', 0)
+    store.commit('scene/events', json.events)
     store.commit('scene/bgImage', json.bgImage)
   }
 }
