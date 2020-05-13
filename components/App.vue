@@ -1,19 +1,23 @@
 <template lang="pug">
   .container
-    .app(:style="{ backgroundImage: `url(${bgImage})` }")
+    //- .app(:style="{ backgroundImage: `url(${bgImage})` }")
+    .app
+      Character
       MainText
 </template>
 
 <script>
+import Character from '~/components/Character.vue'
 import MainText from '~/components/MainText.vue'
 
 export default {
   components: {
-    MainText
+    MainText,
+    Character
   },
   computed: {
     bgImage () {
-      return this.$store.state.scene.bgImage
+      return '_nuxt/assets/graphic/background/livehouse.png'
     }
   }
 }
@@ -33,4 +37,6 @@ export default {
   height 100%
   background-position center
   background-size cover
+  background-image url('~assets/graphic/background/livehouse.png')
+  overflow hidden
 </style>
