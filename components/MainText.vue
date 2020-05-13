@@ -31,7 +31,7 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper
-  height 30vh
+  height 30%
   width 100%
   position absolute
   bottom 0

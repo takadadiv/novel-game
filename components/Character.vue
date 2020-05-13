@@ -23,5 +23,5 @@ export default {
   position relative
 .character
   position absolute
-  height 55vh
+  height 80%
 </style>
